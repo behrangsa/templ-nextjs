@@ -1,0 +1,22 @@
+{
+	"name": "Node.js & TypeScript",
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": {
+			"version": "latest",
+			"ppa": true
+		}
+	},
+	"extensions": [
+		"GitHub.copilot",
+		"GitHub.vscode-pull-request-github",
+		"GitHub.github-vscode-theme",
+		"GitHub.remotehub",
+		"esbenp.prettier-vscode",
+		"ms-vscode-remote.remote-containers",
+		"vscode-icons-team.vscode-icons"
+	],
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"onCreateCommand": "./.devcontainer/onCreateCommand.sh"
+}

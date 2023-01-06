@@ -1,0 +1,10 @@
+= Project Name
+
+Project description.
+
+== Run locally
+
+```bash
+$ pnpm install
+$ pnpm run dev
+```
