@@ -1,7 +1,33 @@
 {
-    "workbench.colorTheme": "GitHub Light",
-    "editor.fontSize": 18,
-    "editor.fontLigatures": true,
-    "editor.fontFamily": "'JetBrains Mono', 'Fira Code', 'IBM Plex Mono', 'Droid Sans Mono', 'monospace', monospace",
-    "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "GitHub Light",
+  "editor.fontSize": 18,
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "'JetBrains Mono', 'Fira Code', 'IBM Plex Mono', 'Droid Sans Mono', 'monospace', monospace",
+  "editor.inlineSuggest.enabled": true,
+  "editor.minimap.enabled": false,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.startupEditor": "none",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

@@ -1,6 +1,7 @@
-= Project Name
+= Template Next.js 13 Project
 
-Project description.
+* MDX integration configured
+* Syntax highlighting of code blocks configured
 
 == Run locally
 

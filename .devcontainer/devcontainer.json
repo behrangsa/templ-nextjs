@@ -1,33 +1,35 @@
 {
-	"name": "Node.js & TypeScript",
-	"features": {
-		"ghcr.io/devcontainers/features/git:1": {
-			"version": "latest",
-			"ppa": true
-		}
-	},
-	"extensions": [
-		"esbenp.prettier-vscode",
-		"GitHub.copilot",
-		"GitHub.github-vscode-theme",
-		"GitHub.remotehub",
-		"GitHub.vscode-pull-request-github",
-		"miguelsolorio.fluent-icons",
-		"ms-vscode-remote.remote-containers",
-		"ms-vscode.cpptools",
-		"redhat.vscode-xml",
-		"vscode-icons-team.vscode-icons",
-		"vscjava.vscode-java-pack",
-		"vscode-icons-team.vscode-icons",
-		"unifiedjs.vscode-mdx",
-		"DavidAnson.vscode-markdownlint",
-		"VisualStudioExptTeam.intellicode-api-usage-examples",
-		"VisualStudioExptTeam.vscodeintellicode",
-		"ms-vscode-remote.remote-containers"
-	],
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
-	"onCreateCommand": "./.devcontainer/onCreateCommand.sh",
-	"postStartCommand": "./.devcontainer/postStartCommand.sh"
+  "name": "Node.js & TypeScript",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {
+      "version": "latest",
+      "ppa": true
+    }
+  },
+  "extensions": [
+    "esbenp.prettier-vscode",
+    "GitHub.copilot",
+    "GitHub.github-vscode-theme",
+    "GitHub.remotehub",
+    "GitHub.vscode-pull-request-github",
+    "miguelsolorio.fluent-icons",
+    "ms-vscode-remote.remote-containers",
+    "ms-vscode.cpptools",
+    "redhat.vscode-xml",
+    "vscode-icons-team.vscode-icons",
+    "vscjava.vscode-java-pack",
+    "vscode-icons-team.vscode-icons",
+    "unifiedjs.vscode-mdx",
+    "DavidAnson.vscode-markdownlint",
+    "VisualStudioExptTeam.intellicode-api-usage-examples",
+    "VisualStudioExptTeam.vscodeintellicode",
+    "ms-vscode-remote.remote-containers",
+    "asciidoctor.asciidoctor-vscode",
+    "jebbs.plantuml"
+  ],
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "onCreateCommand": "./.devcontainer/onCreateCommand.sh",
+  "postStartCommand": "./.devcontainer/postStartCommand.sh"
 }
