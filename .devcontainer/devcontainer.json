@@ -7,16 +7,27 @@
 		}
 	},
 	"extensions": [
+		"esbenp.prettier-vscode",
 		"GitHub.copilot",
-		"GitHub.vscode-pull-request-github",
 		"GitHub.github-vscode-theme",
 		"GitHub.remotehub",
-		"esbenp.prettier-vscode",
+		"GitHub.vscode-pull-request-github",
+		"miguelsolorio.fluent-icons",
 		"ms-vscode-remote.remote-containers",
-		"vscode-icons-team.vscode-icons"
+		"ms-vscode.cpptools",
+		"redhat.vscode-xml",
+		"vscode-icons-team.vscode-icons",
+		"vscjava.vscode-java-pack",
+		"vscode-icons-team.vscode-icons",
+		"unifiedjs.vscode-mdx",
+		"DavidAnson.vscode-markdownlint",
+		"VisualStudioExptTeam.intellicode-api-usage-examples",
+		"VisualStudioExptTeam.vscodeintellicode",
+		"ms-vscode-remote.remote-containers"
 	],
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
-	"onCreateCommand": "./.devcontainer/onCreateCommand.sh"
+	"onCreateCommand": "./.devcontainer/onCreateCommand.sh",
+	"postStartCommand": "./.devcontainer/postStartCommand.sh"
 }
