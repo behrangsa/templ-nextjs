@@ -1,0 +1,140 @@
+import { HelloWorld } from "../components/HelloWorld";
+
+# Hello, MDX!
+
+Example of an [MDX](https://mdxjs.com) page with:
+
+- A list
+- A code block
+- A React component
+
+---
+
+## A list:
+
+- One
+- Two
+- Three
+
+## A block of COBOL code:
+
+```cobol
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. SHORTEST-PATH.
+
+       ENVIRONMENT DIVISION.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 GRAPH-SIZE PIC 9(4) VALUE ZEROS.
+       01 GRAPH-WEIGHT PIC 9(4) VALUE ZEROS.
+       01 GRAPH-SOURCE PIC 9(4) VALUE ZEROS.
+       01 GRAPH-DESTINATION PIC 9(4) VALUE ZEROS.
+       01 SHORTEST-PATH PIC 9(4) VALUE ZEROS.
+       01 DISTANCE PIC 9(4) VALUE ZEROS.
+       01 VERTEX PIC 9(4) VALUE ZEROS.
+       01 GRAPH-ARRAY OCCURS 10 TIMES.
+          02 GRAPH-ROW OCCURS 10 TIMES.
+             03 GRAPH-ELEMENT PIC 9(4) VALUE ZEROS.
+
+       PROCEDURE DIVISION.
+       *> Implementation of Dijkstra's shortest path algorithm
+       *> Pre-conditions:
+       *>    - GRAPH-SIZE should be greater than 0
+       *>    - GRAPH-WEIGHT should be greater than 0
+       *>    - GRAPH-SOURCE should be within the range of GRAPH-SIZE
+       *>    - GRAPH-DESTINATION should be within the range of GRAPH-SIZE
+       *> Post-conditions:
+       *>    - SHORTEST-PATH will contain the shortest path from GRAPH-SOURCE to GRAPH-DESTINATION
+       *>    - DISTANCE will contain the weight of the shortest path
+       DIJKSTRA-SHORTEST-PATH.
+          PERFORM UNTIL GRAPH-DESTINATION = VERTEX
+             SET DISTANCE TO GRAPH-WEIGHT
+             PERFORM VARYING VERTEX FROM 1 BY 1 UNTIL VERTEX > GRAPH-SIZE
+                IF GRAPH-ARRAY(GRAPH-SOURCE, VERTEX) < DISTANCE THEN
+                   SET DISTANCE TO GRAPH-ARRAY(GRAPH-SOURCE, VERTEX)
+                   SET SHORTEST-PATH TO VERTEX
+                END-IF
+             END-PERFORM
+             SET GRAPH-SOURCE TO SHORTEST-PATH
+          END-PERFORM.
+```
+
+## A block of FORTRAN code:
+
+```fortran
+subroutine dijkstra(graph, start, end, path, distance)
+    ! Inputs:
+    ! graph - 2D array of real numbers representing the weight of the edges between nodes
+    ! start - integer representing the starting node
+    ! end - integer representing the ending node
+    !
+    ! Outputs:
+    ! path - 1D array of integers representing the shortest path from start to end
+    ! distance - real number representing the distance of the shortest path
+
+    ! Pre-conditions
+    assert(size(graph,1) == size(graph,2))
+    assert(start > 0 .and. start <= size(graph,1))
+    assert(end > 0 .and. end <= size(graph,1))
+
+    ! Initialize variables
+    integer, dimension(1:size(graph,1)) :: visited
+    real, dimension(1:size(graph,1)) :: dist
+    integer :: current, i, j
+
+    ! Initialize all distances to infinity and mark all nodes as unvisited
+    dist = (/( (1.0E+10), i=1,size(graph,1) /))
+    visited = (/( 0, i=1,size(graph,1) /))
+
+    ! Set the distance of the starting node to 0
+    dist(start) = 0
+
+    ! Repeat until all nodes have been visited
+    do current = 1,size(graph,1)
+
+        ! Find the unvisited node with the shortest distance
+        j = 0
+        do i = 1,size(graph,1)
+            if (visited(i) == 0 .and. (dist(i) < dist(j) .or. j == 0)) then
+                j = i
+            end if
+        end do
+
+        ! Mark the current node as visited
+        visited(j) = 1
+
+        ! Update the distances of the neighboring nodes
+        do i = 1,size(graph,1)
+            if (graph(j,i) > 0 .and. dist(i) > dist(j) + graph(j,i)) then
+                dist(i) = dist(j) + graph(j,i)
+            end if
+        end do
+    end do
+
+    ! Post-conditions
+    assert(dist(end) > 0)
+    assert(all(visited /= 0))
+
+    ! Set the output variables
+    distance = dist(end)
+    path = (/( 0, i=1,size(graph,1) /))
+    i = end
+    j = 1
+    path(j) = i
+    do while (i /= start)
+        do k = 1,size(graph,1)
+            if (graph(i,k) > 0 .and. dist(i) = dist(k) + graph(k,i)) then
+                i = k
+                j = j + 1
+                path(j) = i
+                exit
+            end if
+        end do
+    end do
+
+end subroutine
+```
+
+## A React component
+
+<HelloWorld name="Stranger" />
