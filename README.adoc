@@ -13,3 +13,4 @@ $ pnpm run dev
 == References
 
 * https://nextjs.org/docs/advanced-features/using-mdx
+* ChatGPT!
