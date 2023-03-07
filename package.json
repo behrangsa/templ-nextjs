@@ -2,6 +2,12 @@
   "name": "project-name",
   "version": "0.1.1",
   "private": true,
+  "licenses": [
+    {
+      "type": "UNLICENSED",
+      "url": "https://unlicense.org/"
+    }
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
