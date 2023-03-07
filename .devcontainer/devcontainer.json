@@ -6,27 +6,31 @@
       "ppa": true
     }
   },
-  "extensions": [
-    "esbenp.prettier-vscode",
-    "GitHub.copilot",
-    "GitHub.github-vscode-theme",
-    "GitHub.remotehub",
-    "GitHub.vscode-pull-request-github",
-    "miguelsolorio.fluent-icons",
-    "ms-vscode-remote.remote-containers",
-    "ms-vscode.cpptools",
-    "redhat.vscode-xml",
-    "vscode-icons-team.vscode-icons",
-    "vscjava.vscode-java-pack",
-    "vscode-icons-team.vscode-icons",
-    "unifiedjs.vscode-mdx",
-    "DavidAnson.vscode-markdownlint",
-    "VisualStudioExptTeam.intellicode-api-usage-examples",
-    "VisualStudioExptTeam.vscodeintellicode",
-    "ms-vscode-remote.remote-containers",
-    "asciidoctor.asciidoctor-vscode",
-    "jebbs.plantuml"
-  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "asciidoctor.asciidoctor-vscode",
+        "DavidAnson.vscode-markdownlint",
+        "esbenp.prettier-vscode",
+        "gencay.vscode-chatgpt",
+        "GitHub.copilot",
+        "GitHub.github-vscode-theme",
+        "GitHub.remotehub",
+        "GitHub.vscode-pull-request-github",
+        "jebbs.plantuml",
+        "miguelsolorio.fluent-icons",
+        "ms-vscode-remote.remote-containers",
+        "ms-vscode-remote.remote-containers",
+        "ms-vscode.cpptools",
+        "redhat.vscode-xml",
+        "unifiedjs.vscode-mdx",
+        "VisualStudioExptTeam.intellicode-api-usage-examples",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "vscjava.vscode-java-pack",
+        "vscode-icons-team.vscode-icons"
+      ]
+    }
+  },
   "build": {
     "dockerfile": "Dockerfile"
   },
